@@ -1,0 +1,36 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Chat App Server",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "lint": "eslint src/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UtkarshAhuja2003/chat.git"
+  },
+  "keywords": [
+    "chat app"
+  ],
+  "author": "Utkarsh Ahuja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UtkarshAhuja2003/chat/issues"
+  },
+  "homepage": "https://github.com/UtkarshAhuja2003/chat#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "socket.io": "^4.7.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^3.0.3"
+  }
+}
