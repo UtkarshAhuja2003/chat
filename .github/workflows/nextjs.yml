@@ -54,7 +54,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Artifact Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
