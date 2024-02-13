@@ -23,5 +23,8 @@ module.exports = {
   },
   'rules': {
     'linebreak-style': ['error', 'windows'],
+    'max-len': 'off',
+    'new-cap': 'off',
+    'require-jsdoc': 'off',
   },
 };
