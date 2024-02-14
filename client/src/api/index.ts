@@ -1,5 +1,5 @@
 
-const API_URL = process.env.NODE_SERVER_URI || 'http://chat-app-backend-6lg7.onrender.com/api/v1';
+const API_URL = process.env.NODE_SERVER_URI || 'https://chat-app-backend-6lg7.onrender.com/api/v1';
 
 const loginUser = (username: string) => {
   sessionStorage.setItem('username', username);
