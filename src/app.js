@@ -12,7 +12,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   pingTimeout: 60000,
   cors: {
-    origin: process.env.CORS_ORIGIN || 'https://ahujautkarsh.me',
+    origin: process.env.CORS_ORIGIN || 'https://chat.ahujautkarsh.me',
     credentials: true,
   },
 });
@@ -22,7 +22,7 @@ app.set('io', io);
 app.use(
     cors({
       origin:
-        process.env.CORS_ORIGIN || 'https://ahujautkarsh.me',
+        process.env.CORS_ORIGIN || 'https://chat.ahujautkarsh.me',
       credentials: true,
     }),
 );
