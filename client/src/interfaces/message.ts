@@ -1,6 +1,5 @@
 export interface ChatMessageInterface {
-    _id: string;
-    sender: string;
+    username: string;
     content: string;
-    createdAt: string;
+    timestamp: string;
 }

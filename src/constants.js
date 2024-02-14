@@ -16,10 +16,6 @@ export const ChatEventEnum = Object.freeze({
   NEW_CHAT_EVENT: 'newChat',
   // when there is an error in socket
   SOCKET_ERROR_EVENT: 'socketError',
-  // when participant stops typing
-  STOP_TYPING_EVENT: 'stopTyping',
-  // when participant starts typing
-  TYPING_EVENT: 'typing',
 });
 
 export const AvailableChatEvents = Object.values(ChatEventEnum);
