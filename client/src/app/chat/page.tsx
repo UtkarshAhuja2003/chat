@@ -4,15 +4,15 @@ import {sendMessage} from '@/api';
 import {ChatMessageInterface} from '@/interfaces/message';
 import {socket} from '@/context/SocketContext';
 import {useEffect, useState} from 'react';
-import ConnectionMessage from '@/components/messages/connection';
+// import ConnectionMessage from '@/components/messages/connection';
 import Message from '@/components/messages/message';
 
-const CONNECTED_EVENT = 'connected';
-const DISCONNECT_EVENT = 'disconnect';
+// const CONNECTED_EVENT = 'connected';
+// const DISCONNECT_EVENT = 'disconnect';
 const MESSAGE_RECEIVED_EVENT = 'messageReceived';
 
 export default function Chat() {
-  const [isConnected, setIsConnected] = useState(false);
+  // const [isConnected, setIsConnected] = useState(false);
   const [messages, setMessages] = useState<ChatMessageInterface[]>([]);
   const [message, setMessage] = useState('');
 
@@ -32,15 +32,15 @@ export default function Chat() {
     setMessage(e.target.value);
   };
 
-  const onConnect = () => {
-    console.log('Connected to the server!');
-    setIsConnected(true);
-  };
+  // const onConnect = () => {
+  //   console.log('Connected to the server!');
+  //   setIsConnected(true);
+  // };
 
-  const onDisconnect = () => {
-    console.log('Disconnected from the server!');
-    setIsConnected(false);
-  };
+  // const onDisconnect = () => {
+  //   console.log('Disconnected from the server!');
+  //   setIsConnected(false);
+  // };
 
   const onMessageReceived = (message: ChatMessageInterface) => {
     setMessages((prev) => [message, ...prev]);
@@ -51,14 +51,14 @@ export default function Chat() {
     if (!socket) return;
 
     // Set up event listeners for various socket events:
-    socket.on(CONNECTED_EVENT, onConnect);
-    socket.on(DISCONNECT_EVENT, onDisconnect);
+    // socket.on(CONNECTED_EVENT, onConnect);
+    // socket.on(DISCONNECT_EVENT, onDisconnect);
     socket.on(MESSAGE_RECEIVED_EVENT, onMessageReceived);
 
     return () => {
       // Remove all the event listeners we set up to avoid memory leaks and unintended behaviors.
-      socket.off(CONNECTED_EVENT, onConnect);
-      socket.off(DISCONNECT_EVENT, onDisconnect);
+      // socket.off(CONNECTED_EVENT, onConnect);
+      // socket.off(DISCONNECT_EVENT, onDisconnect);
       socket.off(MESSAGE_RECEIVED_EVENT, onMessageReceived);
     };
   }, []);
