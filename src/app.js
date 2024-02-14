@@ -12,7 +12,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   pingTimeout: 60000,
   cors: {
-    origin: process.env.CORS_ORIGIN,
+    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
     credentials: true,
   },
 });
@@ -22,9 +22,7 @@ app.set('io', io);
 app.use(
     cors({
       origin:
-        process.env.CORS_ORIGIN === '*' ?
-          '*' : // allow all origins
-          process.env.CORS_ORIGIN?.split(','),
+        process.env.CORS_ORIGIN || 'http://localhost:3000',
       credentials: true,
     }),
 );
@@ -32,7 +30,7 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use(messageRouter);
+app.use('/api/v1/chat-app/messages', messageRouter);
 initializeSocketIO(io);
 
 export {httpServer};

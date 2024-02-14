@@ -9,9 +9,9 @@ const sendMessage = asyncHandler(async (req, res) => {
   const {content} = req.body;
   const {senderName} = req.body;
 
-  if (!content) {
-    throw new ApiError(400, 'Message content is required');
-  }
+  // if (!content) {
+  //   throw new ApiError(400, 'Message content is required');
+  // }
 
   const io = req.app.get('io');
 
@@ -29,7 +29,7 @@ const sendMessage = asyncHandler(async (req, res) => {
 
   return res
       .status(201)
-      .json(new ApiResponse(201, receivedMessage, 'Message saved successfully'));
+      .json(new ApiResponse(201, 'Message saved successfully'));
 });
 
 export {sendMessage};
