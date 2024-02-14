@@ -1,6 +1,6 @@
 import cors from 'cors';
 import express from 'express';
-import {createServer} from 'http';
+import {createServer} from 'https';
 import {Server} from 'socket.io';
 import {initializeSocketIO} from './socket/index.js';
 import messageRouter from './routes/message.routes.js';
