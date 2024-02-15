@@ -15,6 +15,8 @@ This is a chat app made using Nextjs,TypeScript, Node and Socket.io
 - Multiple Users can join the chat room and start chatting
 - Sender's username and timestamp visible with every message
 
+This project utilizes ESLint for code quality maintenance. Ensure coding standards by following the recommended formatting guidelines.
+
 ## Installation
 
 Clone the repository:
@@ -41,6 +43,10 @@ cp .env.sample .env
  ```bash
  npm start
  ```
+4. Check lint errors
+ ```bash
+ npm run lint
+ ```
 
 ### Frontend
 
@@ -59,6 +65,10 @@ cp .env.sample .env
 3. Start the nextjs app in development
  ```bash
  npm run dev
+ ```
+4. Check lint errors
+ ```bash
+ npm run lint
  ```
 
 
