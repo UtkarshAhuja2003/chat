@@ -12,7 +12,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   pingTimeout: 60000,
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'https://chat.ahujautkarsh.me',
     methods: ['GET', 'POST'],
   },
 });
@@ -22,7 +22,7 @@ app.set('io', io);
 app.use(
     cors({
       origin:
-        'http://localhost:3000',
+        'https://chat.ahujautkarsh.me',
       credentials: true,
     }),
 );
