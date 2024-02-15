@@ -12,8 +12,8 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   pingTimeout: 60000,
   cors: {
-    origin: '*',
-    credentials: true,
+    origin: 'https://chat.ahujautkarsh.me',
+    methods: ['GET', 'POST'],
   },
 });
 
