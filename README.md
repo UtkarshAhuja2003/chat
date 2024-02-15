@@ -97,5 +97,10 @@ cp .env.sample .env
 
 
 ### Screenshots
+![image](https://github.com/UtkarshAhuja2003/chat/assets/70762626/53efc0ba-b0b9-409a-802a-d1609311bd93)
+![image](https://github.com/UtkarshAhuja2003/chat/assets/70762626/6be188fe-1838-4f1c-a7d3-4e3bea927a9b)
+![image](https://github.com/UtkarshAhuja2003/chat/assets/70762626/107167e7-0865-41ff-9db4-f0dce8b3ea94)
+![image](https://github.com/UtkarshAhuja2003/chat/assets/70762626/759fbdc8-3197-4554-9305-45a20dceb689)
+
 
 
