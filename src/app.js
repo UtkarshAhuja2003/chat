@@ -12,7 +12,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   pingTimeout: 60000,
   cors: {
-    origin: 'https://localhost:3000',
+    origin: 'http://localhost:3000',
     methods: ['GET', 'POST'],
   },
 });
@@ -22,7 +22,7 @@ app.set('io', io);
 app.use(
     cors({
       origin:
-        'https://localhost:3000',
+        'http://localhost:3000',
       credentials: true,
     }),
 );
