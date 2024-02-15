@@ -1,6 +1,6 @@
 import cors from 'cors';
 import express from 'express';
-import {createServer} from 'https';
+import {createServer} from 'http';
 import {Server} from 'socket.io';
 import {initializeSocketIO} from './socket/index.js';
 import messageRouter from './routes/message.routes.js';
@@ -12,7 +12,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   pingTimeout: 60000,
   cors: {
-    origin: 'https://chat.ahujautkarsh.me',
+    origin: 'https://localhost:3000',
     methods: ['GET', 'POST'],
   },
 });
@@ -22,7 +22,7 @@ app.set('io', io);
 app.use(
     cors({
       origin:
-        '*',
+        'https://localhost:3000',
       credentials: true,
     }),
 );
